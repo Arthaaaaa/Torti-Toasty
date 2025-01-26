@@ -8,6 +8,8 @@ app.secret_key = 'admin'  # Replace with a secure key
 @app.route("/home")
 def home():
     return render_template("index.html")
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
 
 
 # Add login route
