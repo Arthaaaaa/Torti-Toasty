@@ -4,7 +4,9 @@ from flask import Flask , render_template, redirect, url_for, request, session
 app = Flask(__name__)
 app.secret_key = 'admin'  # Replace with a secure key
 
-
+@app.route("/")
+def main_home():
+    return redirect(url_for("home"))
 @app.route("/home")
 def home():
     return render_template("index.html")
